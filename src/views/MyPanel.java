@@ -1,0 +1,38 @@
+package views;
+
+import java.awt.Color;
+import java.awt.Image;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class MyPanel extends JPanel{
+
+	public MyPanel() {
+		setBackground(Color.BLUE);
+		
+		LoginView login = new LoginView();
+		add(login);
+		setLayout(null); // Indica para que no haya un punto de inicio de colocar el boton
+		/*JButton boton = new JButton("mi boton"); // Se crea el objeto boton de la librerias swim
+		boton.setBackground(Color.green);
+		boton.setForeground(Color.BLACK);
+		boton.setBounds(10, 10, 400, 400); //Ubica y establce tamaño de boton
+		
+		try {
+			Image icono = ImageIO.read(getClass().getResource("../img/icono.png"));
+			icono = icono.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+			boton.setIcon(new ImageIcon(icono));
+		}catch(Exception ex) {
+			System.out.println("NO se encuentra imagen");
+		}
+		
+		add(boton); //Agrega el boton*/
+		
+		
+		
+	}
+	
+}

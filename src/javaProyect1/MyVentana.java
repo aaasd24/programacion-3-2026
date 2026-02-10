@@ -4,6 +4,8 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
+import views.MyPanel;
+
 public class MyVentana extends JFrame {
 	
 	public MyVentana() {
