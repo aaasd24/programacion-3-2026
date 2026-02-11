@@ -12,52 +12,62 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginView extends JPanel{
+	public Color maronLeve = new Color(158, 118 , 79);
+	public Color blancoIvory = new Color(244, 249 , 233);
+	public Color grisGunmetal = new Color(53, 57 , 60);
+	public Color rosaNeon = new Color(244, 0 , 118);
+	public Color azulGlaous = new Color(119, 133, 172);
+	 
+	
 	public LoginView() {
 		setLayout(null); // sin esto nuestras coordenadas seran ignoradas we
 		crearLogo();
-		crearTexto();
+		crearTexto("Bienvenido a Steak Games!", 200, 150, 30);
+		crearTexto("Ingrese su correo electronico: ", 200, 210, 20);
+		crearTexto("Ingrese su contraseña: ", 200, 350, 20);
+		crearTexto("Error, credenciales incorectas, ingrese su INE", 200, 275, 15);
+		crearTexto("Ingrese contraseña", 200, 430, 15);
 		crearEntradaDeDatos();
 		crearEntradaContrasenia();
 		Boton();
 
 		
 	}
-	public void crearTexto() {
-		JLabel label = new JLabel("Bienvenido a Steak!");
+	public void crearTexto(String texto, int x, int y, int tamanioLetra) {
+		JLabel label = new JLabel(texto);
 		label.setForeground(Color.WHITE);
-		label.setFont(new Font("Arial", Font.PLAIN, 30));
-		label.setBounds(240, 150, 400, 50);
+		label.setFont(new Font("Arial", Font.PLAIN, tamanioLetra));
+		label.setBounds(x, y, 400, 50);
 		add(label);
 	}
-	
 	public void crearEntradaDeDatos() {
 		JTextField textoInicioCuenta = new JTextField();
 		textoInicioCuenta.setForeground(Color.BLACK);
 		textoInicioCuenta.setFont(new Font("Arial", Font.PLAIN, 30));
-		textoInicioCuenta.setBounds(270, 250, 200, 40);
+		textoInicioCuenta.setBounds(200, 250, 400, 40);
 		add(textoInicioCuenta);
 	}
 	
 	public void crearEntradaContrasenia() {
 		JPasswordField contra = new JPasswordField();
 		contra.setFont(new Font("Arial", Font.PLAIN, 30));
-		contra.setBounds(270, 350, 200, 40);
+		contra.setBounds(200, 400, 400, 40);
 		add(contra);
 	}
 	public void Boton() {
-			setBackground(Color.BLUE);
-			JButton boton = new JButton("mi boton"); // Se crea el objeto boton de la librerias swim
-			boton.setBackground(Color.green);
-			boton.setForeground(Color.BLACK);
+			setBackground(maronLeve);
+			JButton boton = new JButton("Iniciar sesion"); // Se crea el objeto boton de la librerias swim
+			boton.setBackground(azulGlaous);
+			boton.setForeground(Color.WHITE);
 			boton.setBounds(300, 500, 120, 50); //Ubica y establce tamaño de boton
 			
-			try {
+			/*try {
 				Image icono = ImageIO.read(getClass().getResource("../img/icono.png"));
 				icono = icono.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
 				boton.setIcon(new ImageIcon(icono));
 			}catch(Exception ex) {
 				System.out.println("NO se encuentra imagen");
-			}
+			}*/
 			
 			add(boton); //Agrega el boton
 		
@@ -65,10 +75,10 @@ public class LoginView extends JPanel{
 	
 	public void crearLogo() {
 	    try {
-	        Image img = ImageIO.read(getClass().getResource("src/img/SteakGames.png"));
+	        Image img = ImageIO.read(getClass().getResource("../img/SteakGames.png"));
 	        Image imgEscalada = img.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
 	        JLabel labelLogo = new JLabel(new ImageIcon(imgEscalada));
-	        labelLogo.setBounds(325, 30, 150, 150); 
+	        labelLogo.setBounds(300, 0, 150, 150); 
 	        add(labelLogo);
 	        
 	    } catch (Exception ex) {

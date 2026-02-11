@@ -9,14 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class MyPanel extends JPanel{
-
+	
+	
 	public MyPanel() {
-		setBackground(Color.BLUE);
-		
+		setBackground(Color.DARK_GRAY);
 		LoginView login = new LoginView();
 		add(login);
 		setLayout(null); // Indica para que no haya un punto de inicio de colocar el boton
-		JButton boton = new JButton("mi boton"); // Se crea el objeto boton de la librerias swim
+		JButton boton = new JButton("mi botones"); // Se crea el objeto boton de la librerias swim
 		boton.setBackground(Color.green);
 		boton.setForeground(Color.BLACK);
 		boton.setBounds(300, 500, 120, 50); //Ubica y establce tamaño de boton
