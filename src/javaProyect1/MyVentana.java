@@ -4,6 +4,7 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
+import views.LoginView;
 import views.MyPanel;
 
 public class MyVentana extends JFrame {
@@ -11,20 +12,22 @@ public class MyVentana extends JFrame {
 	public MyVentana() {
 		//setSize(100, 100);
 		//setLocation(100, 100);
-		setBounds(100, 100, 500, 500);
+		setBounds(100, 100, 800, 800);
 		setResizable(false);
-		setTitle("Hola");
+		setTitle("SteakGames");
 		setLocationRelativeTo(null);
 		//Siempre el set visible al final del constructor
 
 		Toolkit tk = Toolkit.getDefaultToolkit();
-		Image icono = tk.getImage("src/img/icono.png");
+		Image icono = tk.getImage("src/img/SteakGames.png");
 		setIconImage(icono);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		MyPanel panelito = new MyPanel();
-		add(panelito);
+		//MyPanel panelito = new MyPanel();
+		//add(panelito);
+		LoginView miLogin = new LoginView(); 
+		add(miLogin);
 		
 		setVisible(true);
 		
