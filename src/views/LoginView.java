@@ -59,7 +59,7 @@ public class LoginView extends JPanel{
 			JButton boton = new JButton("Iniciar sesion"); // Se crea el objeto boton de la librerias swim
 			boton.setBackground(azulGlaous);
 			boton.setForeground(Color.WHITE);
-			boton.setBounds(300, 500, 120, 50); //Ubica y establce tamaño de boton
+			boton.setBounds(270, 500, 250, 50); //Ubica y establce tamaño de boton
 			
 			/*try {
 				Image icono = ImageIO.read(getClass().getResource("../img/icono.png"));

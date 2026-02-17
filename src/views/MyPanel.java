@@ -9,8 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class MyPanel extends JPanel{
-	
-	
+
 	public MyPanel() {
 		setBackground(Color.DARK_GRAY);
 		LoginView login = new LoginView();
