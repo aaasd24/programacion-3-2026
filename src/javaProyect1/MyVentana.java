@@ -29,7 +29,7 @@ public class MyVentana extends JFrame {
 		//add(panelito);
 		LoginView miLogin = new LoginView(); 
 		BotonsView prueba = new BotonsView();
-		add(prueba);
+		add(miLogin);
 		
 		setVisible(true);
 		

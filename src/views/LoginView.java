@@ -1,15 +1,20 @@
 package views;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Image;
 
 import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 
 public class LoginView extends JPanel{
 	public Color maronLeve = new Color(158, 118 , 79);
@@ -20,25 +25,48 @@ public class LoginView extends JPanel{
 	 
 	
 	public LoginView() {
-		setLayout(null); // sin esto nuestras coordenadas seran ignoradas we
-		crearLogo();
-		crearTexto("Bienvenido a Steak Games!", 200, 150, 30);
-		crearTexto("Ingrese su correo electronico: ", 200, 210, 20);
-		crearTexto("Ingrese su contraseña: ", 200, 350, 20);
-		crearTexto("Error, credenciales incorectas, ingrese su INE", 200, 275, 15);
-		crearTexto("Ingrese contraseña", 200, 430, 15);
-		crearEntradaDeDatos();
-		crearEntradaContrasenia();
-		Boton();
+		
 
+		Border emptyBorder = BorderFactory.createEmptyBorder(20,10,20,10);
+		setBorder(emptyBorder);
+		setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
+		setBackground(azulGlaous);
+		
+		
+		
+		//crearLogo();
+		//crearTexto();
+		//crearTexto();
+		//crearTexto("Ingrese su contraseña: ", 200, 350, 20);
+		//crearTexto("Error, credenciales incorectas, ingrese su INE", 200, 275, 15);
+		//crearTexto("Ingrese contraseña", 200, 430, 15);
+		//crearEntradaDeDatos();
+		//crearEntradaContrasenia();
+		//Boton();
+		
+		JLabel label = new JLabel("Hola");
+		label.setForeground(Color.black);
+		label.setFont(new Font("Arial", Font.PLAIN, 20));
+		this.add(label);
+		
+		JButton boton = new JButton("Button 1");
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.weightx = 0.5;
+		c.gridx = 0;
+		c.gridy = 0;
+		this.add(boton, c);
 		
 	}
-	public void crearTexto(String texto, int x, int y, int tamanioLetra) {
-		JLabel label = new JLabel(texto);
-		label.setForeground(Color.WHITE);
-		label.setFont(new Font("Arial", Font.PLAIN, tamanioLetra));
-		label.setBounds(x, y, 400, 50);
-		add(label);
+	
+	
+	
+	
+	
+	
+	public void crearTexto() {
+		
+		//add(label);
 	}
 	public void crearEntradaDeDatos() {
 		JTextField textoInicioCuenta = new JTextField();
